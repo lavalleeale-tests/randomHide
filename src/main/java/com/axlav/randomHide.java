@@ -8,7 +8,7 @@ public class randomHide {
         public static String[] hideString(long seed, String toHide) {
         Random rng = new Random(seed);
         char[] toHideChars = toHide.toCharArray();
-        char[] hidden = RandomStringUtils.randomPrint(toHide.length()*100).toCharArray();
+        char[] hidden = RandomStringUtils.randomAlphanumeric(toHide.length()*100).toCharArray();
         for (char toHideChar : toHideChars) {
             hidden[rng.nextInt(hidden.length)] = toHideChar;
         }
